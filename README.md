@@ -1,21 +1,21 @@
 # r6-generator-maven-archetype
 
-Archetype to setup r6-generator maven projects for R to Java library integration.
+Archetype to setup r6-generator maven projects for Java library to R project integration.
 
 The archetype needs the following information:
 
 * githubOrganisation
 * githubRepository
-* rPackageName - optional, defaults to githubRepository name
+* rPackageName - optional, defaults to same as githubRepository
 * versionId - optional, defaults to main-SNAPSHOT
 * rPackageVersion - optional, defaults to 0.0.0.9000
 * rPackageLicense - optional, defaults to MIT
 * maintainerName - optional, defaults to an example name
-* maintainerSurname
-* maintainerEmail
+* maintainerSurname - ditto
+* maintainerEmail - ditto
 * maintainerOrganisation - optional, defaults to same as githubOrganisation.
 
-Usage
+Usage:
 
 ```BASH
 cd ~/Git
