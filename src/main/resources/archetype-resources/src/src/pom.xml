@@ -88,9 +88,17 @@
 						<maintainerEmail>${maintainerEmail}</maintainerEmail>
 						<maintainerOrganisation>${maintainerOrganisation}</maintainerOrganisation>
 					</packageData>
-					<outputDirectory>${D}{project.basedir}</outputDirectory>
+					<outputDirectory>${D}{project.basedir}/..</outputDirectory>
 				</configuration>
 				<executions>
+					<!-- This execution compiles a fat jar of the java library -->
+					<execution>
+						<id>compile-java-library</id>
+						<goals>
+							<goal>compile-java-library</goal>
+						</goals>
+					</execution>
+					<!-- This execution generates the supporting r code -->
 					<execution>
 						<id>generate-r-library</id>
 						<goals>

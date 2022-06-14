@@ -15,7 +15,7 @@ see the [javadoc](https://${githubOrganisation}.github.io/${rPackageName}/docs/j
 To generate the R code from the Java classes in this example library run: 
 
 ```BASH
-cd ~/Git/${githubRepository}
+cd ~/Git/${githubRepository}/src
 mvn install
 ```
 Then to use it in R:

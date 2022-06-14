@@ -25,7 +25,7 @@ mvn archetype:generate \
   -DarchetypeVersion=master-SNAPSHOT \
   -DgithubOrganisation=exampleOrganisation \
   -DgithubRepository=examplePackage
-``` 
+```
 
 The newly created Java project will be in the examplePackage subdirectory.
 
@@ -33,6 +33,18 @@ To generate the R package from the Java project it needs to be installed.
 
 
 ```BASH
-cd ~/Git/examplePackage
+cd ~/Git/examplePackage/src
 mvn install
+```
+
+The new project can be pushed to github where it should trigger appropriate workflows if the organisation and repository names given above match.
+
+```BASH
+cd ~/Git/examplePackage
+git init -b main
+git add . 
+git commit -m "initial commit"
+gh repo create exampleOrganisation/examplePackage --source=. --public
+git push
+
 ```
